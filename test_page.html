@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Player Performance Inputs</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .container-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+            width: 40%;
+            margin: 20px;
+        }
+        h2, h3 {
+            color: white;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input {
+            width: 80%;
+            padding: 8px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: none;
+        }
+        button {
+            background-color: #ff5733;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Test Player Performance Inputs</h2>
+
+    <div class="container-wrapper">
+        <!-- Batting Inputs Container -->
+        <div class="container">
+            <h3>Batting Metrics (Last 5 Innings)</h3>
+            <form id="battingForm">
+                <label for="battingAverage">Batting Average:</label>
+                <input type="number" id="battingAverage" name="battingAverage" step="0.01" required>
+
+                <label for="ballsFaced">Balls Faced:</label>
+                <input type="number" id="ballsFaced" name="ballsFaced" required>
+
+                <label for="timeOnCrease">Time Spent on Crease (Minutes):</label>
+                <input type="number" id="timeOnCrease" name="timeOnCrease" required>
+
+                <button type="submit">Submit Batting Data</button>
+            </form>
+        </div>
+
+        <!-- Bowling Inputs Container -->
+        <div class="container">
+            <h3>Bowling Metrics (Last 5 Innings)</h3>
+            <form id="bowlingForm">
+                <label for="wicketsPerInnings">Wickets per Innings:</label>
+                <input type="number" id="wicketsPerInnings" name="wicketsPerInnings" required>
+
+                <label for="bowlingAverage">Bowling Average:</label>
+                <input type="number" id="bowlingAverage" name="bowlingAverage" step="0.01" required>
+
+                <label for="oversBowled">Overs Bowled:</label>
+                <input type="number" id="oversBowled" name="oversBowled" required>
+
+                <label for="economyRate">Economy Rate:</label>
+                <input type="number" id="economyRate" name="economyRate" step="0.01" required>
+
+                <button type="submit">Submit Bowling Data</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

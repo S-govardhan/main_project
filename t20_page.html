@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T20I Player Performance Inputs</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+        .container-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+        .container {
+            background: #000000b3;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+            width: 40%;
+            margin: 20px;
+        }
+        h2, h3 {
+            color: white;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input {
+            width: 80%;
+            padding: 8px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: none;
+        }
+        button {
+            background-color: #ff5733;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>T20I Player Performance Inputs</h2>
+
+    <div class="container-wrapper">
+        <!-- Batting Inputs Container -->
+        <div class="container">
+            <h3>Batting Metrics (Last 5 Innings)</h3>
+            <form id="battingForm">
+                <label for="strikeRate">Strike Rate:</label>
+                <input type="number" id="strikeRate" name="strikeRate" step="0.01" required>
+
+                <label for="boundaries">Boundaries per Over:</label>
+                <input type="number" id="boundaries" name="boundaries" step="0.01" required>
+
+                <label for="dotBall">Dot Ball Percentage:</label>
+                <input type="number" id="dotBall" name="dotBall" step="0.01" required>
+
+                <label for="totalScore">Total Score:</label>
+                <input type="number" id="totalScore" name="totalScore" required>
+
+                <button type="submit">Submit Batting Data</button>
+            </form>
+        </div>
+
+        <!-- Bowling Inputs Container -->
+        <div class="container">
+            <h3>Bowling Metrics (Last 5 Innings)</h3>
+            <form id="bowlingForm">
+                <label for="economy">Economy Rate:</label>
+                <input type="number" id="economy" name="economy" step="0.01" required>
+
+                <label for="wickets">Wickets per Match:</label>
+                <input type="number" id="wickets" name="wickets" required>
+
+                <label for="dotBallBowl">Dot Ball Percentage:</label>
+                <input type="number" id="dotBallBowl" name="dotBallBowl" step="0.01" required>
+
+                <label for="deathOversWickets">Death Overs Wickets (Overs 16-20):</label>
+                <input type="number" id="deathOversWickets" name="deathOversWickets" required>
+
+                <label for="deathOversEconomy">Death Overs Economy:</label>
+                <input type="number" id="deathOversEconomy" name="deathOversEconomy" step="0.01" required>
+
+                <button type="submit">Submit Bowling Data</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

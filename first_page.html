@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Format Selection</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            background-color: #ffffff;
+            opacity: 22;
+        }
+        h1,h3 {
+            color: #ffffff;
+        }
+        .container {
+            margin: 50px auto;
+            width: 40%;
+            background: #000000b3;
+            padding: 20px;
+            border-radius: 15px;
+            border-color: #2e8b57;
+            box-shadow: 0px 0px 10px grey;
+            justify-content: center;
+            align-items: center;
+        }
+        .button {
+            padding: 15px 30px;
+            margin: 10px;
+            box-shadow: #000e03;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 10px;
+            color: #d1f5d9;
+            transition: 0.3s;
+        }
+        .t20i { background-color: #ff5733; }
+        .odi { background-color:  #ff5733; }
+        .test { background-color:  #ff5733; }
+        .button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Select Match Format</h1>
+        <h3>"It's not just about winning; it's about how you play the game."</h3>
+        
+        <button class="button t20i" onclick="selectFormat('T20I')"><a href="t20_page.html">T20</a></button>
+        <button class="button odi" onclick="selectFormat('ODI')"><a href="odi_page.html">ODI</a></button><br>
+        <button class="button test" onclick="selectFormat('TEST')"><a href="test_page.html">TEST</a></button>
+    </div>
+
+</body>
+</html>
